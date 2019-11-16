@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='styles/css/style.css') }}"/>
+<link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -33,21 +33,9 @@
 </div>
 
 <div id="main">
-	<header>
-		<h1><center>MEET TO EAT</center></h1>	
-	</header>
-	<table style="width:100%" border-spacing="2px;">
-		<tr>
-			<td><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span></td>
-			<td><h2>Index page</h2></td>
-		</tr>
-		<tr>
-			<p>This is the index page</p>
-		</tr>
-		<tr>
-				<p>This is the index page</p>
-			</tr>
-	</table>
+	<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
+	<h2>Groups</h2>
+	<p>This is the groups page</p>
 	
 </div>
 
@@ -55,13 +43,13 @@
 function openNav() {
 	document.getElementById("mySidenav").style.width = "250px";
 	document.getElementById("main").style.marginLeft = "250px";
-	document.body.style.backgroundColor = "#558260";
+	document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
 }
 
 function closeNav() {
 	document.getElementById("mySidenav").style.width = "0";
 	document.getElementById("main").style.marginLeft= "0";
-	document.body.style.backgroundColor = "#91cfa1";
+	document.body.style.backgroundColor = "white";
 }
 </script>
    
