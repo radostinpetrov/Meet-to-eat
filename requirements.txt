@@ -1,2 +1,4 @@
 Flask-WTF
 flask
+flask-sqlalchemy
+flask-migrate
