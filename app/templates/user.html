@@ -140,7 +140,56 @@
 								</div>
 							</div>
 						</div>
-						
+						<div class="rowcontainer">
+							<div style="height:150px;">
+								<div style="float: left;width:33%;height:100%;">
+									<div style="padding:10px">
+										<div class="fooditem" id="pref9" style="padding:10px">
+											<!-- <img src="foods/american.jpeg" width=100% height=100%> -->
+										</div>
+									</div>
+								</div>
+								<div style="float: left;width:33%;height:100%;">
+									<div style="padding:10px">
+										<div class="fooditem" id="pref10" style="padding:10px">
+											<!-- <img src="foods/bbq.jpeg" width=100% height=100%> -->
+										</div>
+									</div>
+								</div>
+								<div style="float: left;width:33%;height:100%;">
+									<div style="padding:10px">
+										<div class="fooditem" id="pref11" style="padding:10px">
+											<!-- <img src="foods/british.png" width=100% height=100%> -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="rowcontainer">
+							<div style="height:150px;">
+								<div style="float: left;width:33%;height:100%;">
+									<div style="padding:10px">
+										<div class="fooditem" id="pref12" style="padding:10px">
+											<!-- <img src="foods/american.jpeg" width=100% height=100%> -->
+										</div>
+									</div>
+								</div>
+								<div style="float: left;width:33%;height:100%;">
+									<div style="padding:10px">
+										<div class="fooditem" id="pref13" style="padding:10px">
+											<!-- <img src="foods/bbq.jpeg" width=100% height=100%> -->
+										</div>
+									</div>
+								</div>
+								<div style="float: left;width:33%;height:100%;">
+									<div style="padding:10px">
+										<div class="fooditem" id="pref14" style="padding:10px">
+											<!-- <img src="foods/british.png" width=100% height=100%> -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -180,16 +229,138 @@ function buildImage() {
 	var img = document.createElement('img');
 	var currentdiv = 0;
 	var pref = 'pref';
-	for(var i = 0; i < preferences.length; i++){
-		if(preferences[i] == 1){
-			img.src = "{{ url_for('static',filename='images/" + images[i] +"') }}";
-			img.setAttribute('width', '100%');
-			img.setAttribute('height', '100%');
-			var prefid = pref+String(currentdiv)
-			document.getElementById(prefid).appendChild(img.cloneNode(true));
-			currentdiv += 1;
-		}
+
+	if(preferences[0] == 1){
+		img.src = "{{ url_for('static',filename= 'images/foods/american.jpeg')}}";
+		img.setAttribute('width', '100%');
+		img.setAttribute('height', '100%');
+		var prefid = pref+String(currentdiv)
+		document.getElementById(prefid).appendChild(img.cloneNode(true));
+		currentdiv += 1;
 	}
+	if(preferences[1] == 1){
+		img.src = "{{ url_for('static',filename= 'images/foods/bbq.jpeg')}}";
+		img.setAttribute('width', '100%');
+		img.setAttribute('height', '100%');
+		var prefid = pref+String(currentdiv)
+		document.getElementById(prefid).appendChild(img.cloneNode(true));
+		currentdiv += 1;
+	}
+	if(preferences[2] == 1){
+		img.src = "{{ url_for('static',filename= 'images/foods/british.jpeg')}}";
+		img.setAttribute('width', '100%');
+		img.setAttribute('height', '100%');
+		var prefid = pref+String(currentdiv)
+		document.getElementById(prefid).appendChild(img.cloneNode(true));
+		currentdiv += 1;
+	}
+	if(preferences[3] == 1){
+		img.src = "{{ url_for('static',filename= 'images/foods/brunch.jpeg')}}";
+		img.setAttribute('width', '100%');
+		img.setAttribute('height', '100%');
+		var prefid = pref+String(currentdiv)
+		document.getElementById(prefid).appendChild(img.cloneNode(true));
+		currentdiv += 1;
+	}
+	if(preferences[4] == 1){
+		img.src = "{{ url_for('static',filename= 'images/foods/carib.jpeg')}}";
+		img.setAttribute('width', '100%');
+		img.setAttribute('height', '100%');
+		var prefid = pref+String(currentdiv)
+		document.getElementById(prefid).appendChild(img.cloneNode(true));
+		currentdiv += 1;
+	}
+	if(preferences[5] == 1){
+		img.src = "{{ url_for('static',filename= 'images/foods/chinese.jpeg')}}";
+		img.setAttribute('width', '100%');
+		img.setAttribute('height', '100%');
+		var prefid = pref+String(currentdiv)
+		document.getElementById(prefid).appendChild(img.cloneNode(true));
+		currentdiv += 1;
+	}
+	if(preferences[6] == 1){
+		img.src = "{{ url_for('static',filename= 'images/foods/curry.jpeg')}}";
+		img.setAttribute('width', '100%');
+		img.setAttribute('height', '100%');
+		var prefid = pref+String(currentdiv)
+		document.getElementById(prefid).appendChild(img.cloneNode(true));
+		currentdiv += 1;
+	}
+	if(preferences[7] == 1){
+		img.src = "{{ url_for('static',filename= 'images/foods/dessert.jpeg')}}";
+		img.setAttribute('width', '100%');
+		img.setAttribute('height', '100%');
+		var prefid = pref+String(currentdiv)
+		document.getElementById(prefid).appendChild(img.cloneNode(true));
+		currentdiv += 1;
+	}
+	if(preferences[8] == 1){
+		img.src = "{{ url_for('static',filename= 'images/foods/dimsum.jpeg')}}";
+		img.setAttribute('width', '100%');
+		img.setAttribute('height', '100%');
+		var prefid = pref+String(currentdiv)
+		document.getElementById(prefid).appendChild(img.cloneNode(true));
+		currentdiv += 1;
+	}
+	if(preferences[9] == 1){
+		img.src = "{{ url_for('static',filename= 'images/foods/korean.jpeg')}}";
+		img.setAttribute('width', '100%');
+		img.setAttribute('height', '100%');
+		var prefid = pref+String(currentdiv)
+		document.getElementById(prefid).appendChild(img.cloneNode(true));
+		currentdiv += 1;
+	}
+	if(preferences[10] == 1){
+		img.src = "{{ url_for('static',filename= 'images/foods/pasta.jpeg')}}";
+		img.setAttribute('width', '100%');
+		img.setAttribute('height', '100%');
+		var prefid = pref+String(currentdiv)
+		document.getElementById(prefid).appendChild(img.cloneNode(true));
+		currentdiv += 1;
+	}
+	if(preferences[11] == 1){
+		img.src = "{{ url_for('static',filename= 'images/foods/pizza.jpeg')}}";
+		img.setAttribute('width', '100%');
+		img.setAttribute('height', '100%');
+		var prefid = pref+String(currentdiv)
+		document.getElementById(prefid).appendChild(img.cloneNode(true));
+		currentdiv += 1;
+	}
+	if(preferences[12] == 1){
+		img.src = "{{ url_for('static',filename= 'images/foods/steak.jpeg')}}";
+		img.setAttribute('width', '100%');
+		img.setAttribute('height', '100%');
+		var prefid = pref+String(currentdiv)
+		document.getElementById(prefid).appendChild(img.cloneNode(true));
+		currentdiv += 1;
+	}
+	if(preferences[13] == 1){
+		img.src = "{{ url_for('static',filename= 'images/foods/sushi.jpeg')}}";
+		img.setAttribute('width', '100%');
+		img.setAttribute('height', '100%');
+		var prefid = pref+String(currentdiv)
+		document.getElementById(prefid).appendChild(img.cloneNode(true));
+		currentdiv += 1;
+	}
+	if(preferences[14] == 1){
+		img.src = "{{ url_for('static',filename= 'images/foods/viet.jpeg')}}";
+		img.setAttribute('width', '100%');
+		img.setAttribute('height', '100%');
+		var prefid = pref+String(currentdiv)
+		document.getElementById(prefid).appendChild(img.cloneNode(true));
+		currentdiv += 1;
+	}
+
+	// for(var i = 0; i < preferences.length; i++){
+	// 	if(preferences[i] == 1){
+	// 		img.src = "{{ url_for('static',filename= 'images/" + String(images[i]) + "')}}";
+	// 		img.setAttribute('width', '100%');
+	// 		img.setAttribute('height', '100%');
+	// 		var prefid = pref+String(currentdiv)
+	// 		document.getElementById(prefid).appendChild(img.cloneNode(true));
+	// 		currentdiv += 1;
+	// 	}
+	// }
 }
 	
 </script>
