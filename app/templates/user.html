@@ -11,7 +11,7 @@
 	<table style="width:100%" border-spacing="2px;">
 		<tr>
 			<td><i class="fa fa-user"></i></td>
-			<td><a href="user.html">Profile</a></td>
+			<td><a href="{{ url_for('user', username=current_user.username) }}">Profile</a></td>
   		</tr>
 		<tr>
 			<td><i class="fa fa-users"></i></td>
@@ -27,7 +27,7 @@
 		</tr>
 		<tr>
 			<td><i class="fa fa-power-off"></i></td>
-			<td><a href="logout.html">Logout</a></td>
+			<td><a href="{{ url_for('logout') }}">Logout</a></td>
 		</tr>
 	</table>
 </div>
@@ -35,10 +35,14 @@
 <div id="main">
 	<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
 	<h2>Profile page</h2>
-	<p>This is the profile page</p>
-	
+
 </div>
 
+{% block content %}
+    <h1>User: {{ user.username }}</h1>
+    <hr>
+
+{% endblock %}
 <script>
 function openNav() {
 	document.getElementById("mySidenav").style.width = "250px";

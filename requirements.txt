@@ -1,5 +1,6 @@
-Flask-login
+flask-login
 Flask-WTF
 flask
 flask-sqlalchemy
 flask-migrate
+flask-sessions
