@@ -1,3 +1,4 @@
+Flask-login
 Flask-WTF
 flask
 flask-sqlalchemy
