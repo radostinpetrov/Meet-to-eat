@@ -1,7 +1,22 @@
 body {
 	font-family: "Lato", sans-serif;
-	background: #91cfa1;
+	background: #D8E9F3;
 	transition: background-color .5s;
+}
+
+#mainmenu{
+	transition: 0.3s;
+}
+#mainmenu:hover{
+	background-color: #f1f1f1;
+}
+
+#mainspace{
+	width:120px;
+}
+
+.rowcontainer{
+	width: 100%;
 }
 
 .sidenav {
@@ -17,8 +32,9 @@ body {
 	padding-top: 60px;
 }
 
-.sidenav a,i {
-	padding: 8px 8px 8px 32px;
+
+.sidenav div {
+	padding: 8px 8px 8px 8px;
 	text-decoration: none;
 	font-size: 25px;
 	color: #818181;
@@ -26,8 +42,8 @@ body {
 	transition: 0.3s;
 }
 
-.sidenav a:hover, i:hover {
-	color: #f1f1f1;
+.sidenav .item:hover{
+	background-color: #f1f1f1;
 }
 
 .sidenav .closebtn {
@@ -38,9 +54,63 @@ body {
 	margin-left: 50px;
 }
 
+.fooditem{
+	background-color: none;
+}
+
+.fooditem:hover{
+	background-color: #f1f1f1;
+}
+
+.foodcolumn{
+	height:300px;
+}
+
+
 #main {
 	transition: margin-left .5s;
-	padding: 16px;
+	/* padding: 16px; */
+}
+
+#page{
+	position: absolute;
+	width: 100%;
+	top: 180px;
+}
+
+#topbar{
+	z-index: 1;
+	position:fixed;
+	top:0px;
+	width:100%;
+}
+
+#submitprefs{
+	width:100px;
+	margin:0 auto;
+	text-align:center;
+	background-color:#4390BC;
+	cursor:pointer;
+	transition: 0.3s;
+}
+
+#submitprefs:hover{
+	background-color: #f1f1f1;
+}
+
+
+
+#groupcreate{
+	width:200px;
+	margin:0 auto;
+	height:50px;
+	background-color:#4390BC;
+	text-align:center;
+	transition: 0.3s;
+}
+
+#groupcreate:hover{
+	background-color: #f1f1f1;
 }
 
 @media screen and (max-height: 450px) {

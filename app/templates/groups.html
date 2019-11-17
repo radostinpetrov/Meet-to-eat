@@ -2,54 +2,90 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="style.css" />
+<!-- <link rel="stylesheet" type="text/css" href="style.css" /> -->
+<link rel="stylesheet" type="text/css" href= "{{ url_for('static',filename='styles/css/style.css') }}"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
 <div id="mySidenav" class="sidenav">
-	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-	<table style="width:100%" border-spacing="2px;">
-		<tr>
-			<td><i class="fa fa-user"></i></td>
-			<td><a href="user.html">Profile</a></td>
-  		</tr>
-		<tr>
-			<td><i class="fa fa-users"></i></td>
-			<td><a href="groups.html">Groups</a></td>
-		</tr>
-		<tr>
-			<td><i class="fa fa-cutlery"></i></td>
-			<td><a href="foodprefs.html">Foods</a></td>
-		</tr>
-		<tr>
-			<td><i class="fa fa-sliders"></i></td>
-			<td><a href="settings.html">Settings</a></td>
-		</tr>
-		<tr>
-			<td><i class="fa fa-power-off"></i></td>
-			<td><a href="logout.html">Logout</a></td>
-		</tr>
-	</table>
+	<a style="text-decoration:none" href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+		<div class="navi item"><i class="fa fa-times" style="font-size:30px;"></i></div>
+	</a>
+	<div class="navi">
+		<div class="navi item">
+			<div style="float: left">
+				<i class="fa fa-user" style="font-size:36px;"></i>
+			</div>
+			<a style="text-decoration:none" href="{{ url_for('user', username=current_user.username) }}"><div>Profile</div></a>
+		</div>
+		<div class="navi item">
+			<div style="float: left">
+				<i class="fa fa-users" style="font-size:30px;"></i>
+			</div>
+			<a style="text-decoration:none" href="{{ url_for('groups') }}"><div>Groups</div></a>
+		</div>
+		<div class="navi item">
+			<div style="float: left">
+				<i class="fa fa-cutlery" style="font-size:36px;"></i>
+			</div>
+			<a style="text-decoration:none" href="{{ url_for('foodprefs') }}"><div>Foods</div></a>
+		</div>
+		<div class="navi item">
+			<div style="float: left">
+				<i class="fa fa-sliders" style="font-size:36px;"></i>
+			</div>
+			<a style="text-decoration:none" href="{{ url_for('settings') }}"><div>Settings</div></a>
+		</div>
+		<div class="navi item">
+			<div style="float: left">
+				<i class="fa fa-power-off" style="font-size:36px;"></i>
+			</div>
+			<a style="text-decoration:none" href="{{ url_for('logout') }}"><div>Logout</div></a>
+		</div>
+	</div>
 </div>
 
-<div id="main">
-	<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
-	<h2>Groups</h2>
-	<p>This is the groups page</p>
-	
+<div id="main" style="width:100%;">
+	<div id="topbar">
+		<div style="display:inline-block;width:100%;height:80px;background-color:#4390BC;text-align:center;"><h1>MEET TO EAT</h1></div>
+		<div style="display:inline-block;width:100%;height:80px;background-color:#4390BC;text-align:center;">
+			<div style="width:15%;height:80px;float: left; cursor:pointer" id="mainmenu" onclick="openNav()"><h2>&#9776; MENU</h2></div>
+			<div style="width:70%;float: left" id="maintitle"><h2 style="text-align: center;">GROUPS</h2></div>
+			<div style="width:15%;float: left" id="mainspace"><i class="fa fa-users" style="color:black;font-size:60px;"></i></div>
+		</div>
+	</div>
+	<div id="page">
+		<div class="rowcontainer">
+			<div id="displaygroup" style="transition:0.5s;width:80%; margin:0 auto;height:100px;background-color:#4390BC;" id="groupcreate">
+				<div style="float: left;"><h2>Groop nem</h2></div>
+				<div id="editgroup" style="float: right;" onclick='document.getElementById("displaygroup").style.height = "500px"'><i class="fa fa-wrench" style="font-size:24px;"></i></div>
+				
+			</div>
+		</div>
+		<div class="rowcontainer">
+			<div id="groupcreate" style="text-align:center;cursor:pointer" onclick="newGroup()">
+				<h2>New Group <i class="fa fa-plus-square-o" style="font-size:24px;"></i></h2>
+			</div>
+		</div>
+	</div>
 </div>
 
 <script>
 function openNav() {
 	document.getElementById("mySidenav").style.width = "250px";
 	document.getElementById("main").style.marginLeft = "250px";
-	document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+	document.body.style.backgroundColor = "#B2D3E6";
 }
 
 function closeNav() {
 	document.getElementById("mySidenav").style.width = "0";
 	document.getElementById("main").style.marginLeft= "0";
-	document.body.style.backgroundColor = "white";
+	document.body.style.backgroundColor = "#D8E9F3";
+}
+function newGroup() {
+	
 }
 </script>
    
